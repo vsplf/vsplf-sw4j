@@ -69,6 +69,10 @@
     </dependency>
   </dependencies>
 
+  <modules>
+    <module>vsplf-sw4j-base</module>
+  </modules>
+
   <profiles>
     <profile>
       <id>vsplf.violations.checking</id>
