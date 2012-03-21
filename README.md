@@ -34,7 +34,6 @@ To check any violations, use this command below:
 
 * Issues management: https://github.com/vsplf/vsplf-sw4j/issues
 * Jenkins continuous integration build: https://vsplf.ci.cloudbees.com/job/vsplf-sw4j-master-ci/
-![Build on CloudBees](http://www.cloudbees.com/sites/default/files/Button-Built-on-CB-1.png)
 * Artifact deployment:
   * release repository:  https://repository-vsplf.forge.cloudbees.com/release/
   * snapshot repository: http://repository-vsplf.forge.cloudbees.com/snapshot/
