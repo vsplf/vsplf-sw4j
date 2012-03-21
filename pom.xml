@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Copyright (C) VSPLF Software Foundation (VSF), the origin author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.vsplf</groupId>
+    <artifactId>vsplf-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.vsplf</groupId>
+  <artifactId>vsplf-sw4j</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>vsplf-sw4j</name>
+  <url>http://vsplf.org/projects/vsplf-sw4j</url>
+
+  <properties>
+    <vsplf-build-tools.version>0.1.0-SNAPSHOT</vsplf-build-tools.version>
+
+    <testng.version>6.4</testng.version>
+
+  </properties>
+
+
+  <repositories>
+    <repository>
+      <id>vsplf-release</id>
+      <name>vsplf release repo</name>
+      <url>http://repository-vsplf.forge.cloudbees.com/release/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>vsplf-snapshot</id>
+      <name>vsplf snapshot repo</name>
+      <url>http://repository-vsplf.forge.cloudbees.com/snapshot/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>vsplf.violations.checking</id>
+      <activation>
+        <property>
+          <name>vsplf.violations.checking</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>${maven-checkstyle-plugin.version}</version>
+            <configuration>
+              <configLocation>vsplf-tools/config/checkstyle/vsplf-checkstyle.xml</configLocation>
+              <headerLocation>vsplf-tools/config/checkstyle/java.header</headerLocation>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>compile</phase>
+                <goals>
+                  <goal>checkstyle</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${maven-checkstyle-plugin.version}</version>
+        <configuration>
+          <configLocation>vsplf-tools/config/checkstyle/vsplf-checkstyle.xml</configLocation>
+          <headerLocation>vsplf-tools/config/checkstyle/java.header</headerLocation>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>
