@@ -27,7 +27,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.vsplf.sw4j</groupId>
+  <groupId>org.vsplf.vsplf-sw4j</groupId>
   <artifactId>vsplf-sw4j-base</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>vsplf-sw4j-base</name>
