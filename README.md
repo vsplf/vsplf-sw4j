@@ -2,6 +2,9 @@
 
 https://github.com/vsplf/vsplf-sw4j/wiki
 
+## Project Mission
+* Create a common range of Java Model matching semantic web items
+* Modular model systems and easy to extend
 
 ## How to develop
 

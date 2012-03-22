@@ -1,7 +1,9 @@
 The list of reference resources related to this project:
 
+* http://www.w3.org/2001/sw/
 * http://www.w3.org/standards/semanticweb/ontology
 * http://incubator.apache.org/jena/documentation/ontology/
 * http://www.openrdf.org/documentation.jsp
 * http://jrdf.sourceforge.net/
 * http://schema.org/docs/full.html
+* http://schema.rdfs.org/
